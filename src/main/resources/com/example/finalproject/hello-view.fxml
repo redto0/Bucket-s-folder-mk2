@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.HelloController">
+   <center>
+      <TextArea fx:id="textarea" prefHeight="200.0" prefWidth="462.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <AnchorPane prefHeight="256.0" prefWidth="144.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="moveupbutton" contentDisplay="CENTER" layoutX="57.0" layoutY="89.0" mnemonicParsing="false" onAction="#moveUpButtonClicked" prefHeight="32.0" prefWidth="30.0" text="↑" />
+            <Button fx:id="moveleftbutton" contentDisplay="CENTER" layoutX="27.0" layoutY="121.0" mnemonicParsing="false" onAction="#moveLeftButtonClicked" prefHeight="30.0" prefWidth="30.0" text="←" />
+            <Button fx:id="moverightbutton" contentDisplay="CENTER" layoutX="87.0" layoutY="121.0" mnemonicParsing="false" onAction="#moveRightButtonClicked" prefHeight="30.0" prefWidth="30.0" text="→" />
+            <Button fx:id="movedownbutton" contentDisplay="CENTER" layoutX="57.0" layoutY="151.0" mnemonicParsing="false" onAction="#moveDownButtonClicked" prefHeight="32.0" prefWidth="30.0" text="↓" />
+            <Button fx:id="Restarter" layoutX="1.0" layoutY="2.0" mnemonicParsing="false" onAction="#RestarterClicked" text="Start" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <GridPane prefHeight="256.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="searchbutton" mnemonicParsing="false" onAction="#searchButtonClicked" text="Search" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="fightbutton" mnemonicParsing="false" onAction="#fightButtonClicked" text="Fight" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="runbutton" mnemonicParsing="false" onAction="#runButtonClicked" text="Run" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="sleepbutton" mnemonicParsing="false" onAction="#sleepButtonClicked" text="Sleep" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </right>
+   <top>
+      <Label fx:id="gold" text="Current Gold: " BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <GridPane prefHeight="127.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="playerstats" prefHeight="200.0" prefWidth="200.0" promptText="Player Stats:" />
+            <TextArea fx:id="NPCstats" prefHeight="200.0" prefWidth="200.0" promptText="NPC Stats:" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
